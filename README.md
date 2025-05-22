@@ -28,7 +28,8 @@ If you have an existing nodejs and mongodb environment:
 * Install the node modules used in the project ```npm install```
 * Edit `config.js` with your deployment specific details
 * Alternately you can set the following environment variables to configure the service. `CMS_HOST` `CMS_API_USERNAME` `CMS_API_PASSWORD` `API_PORT` `MONGO_HOST` E.g.; `export CMS_HOST="cms.empire.net:444"`
-* Start the service ```node app.js```
+* Start the service
+
 
 ## Configuring CMS
 * In Webadmin add a CDR receiver that points to the host running the service on the port you specified in `config.js`
@@ -62,10 +63,12 @@ If you have an existing nodejs and mongodb environment:
 
 * Create a config - `curl -X "POST" "http://ip:port/api/configs" -H "Content-Type: application/json; charset=utf-8" -d $'{"cospace": "4855289f-0ae9-4253-af1a-c8f5f12eb596","participants": ["r2d2@hoth.org"]}'`
 * Get a config `curl "http://ip:port/api/configs/<id>"`
-* Delete a config `curl -X "DELETE" "http://ip:port/api/configs/<id>"`
+* Delete a config 
 
-## Vagrant
+
+
+
 * The project includes a [Vagrantfile](https://www.vagrantup.com) to speed up the deployment
 * The Vagrantfile includes a shell provisioner for Debian
 * You'll need to modify `config.vm.box = ""` to match a Debian box that you already have or you can download a new one. The project is built on Debian jessie
-* The default networking mode is `public_network` "bridged". Modify `config.vm.network` as needed for your environment
+* The default networking mode is `publi c_network` "bridged". Modify   as needed for your environment
